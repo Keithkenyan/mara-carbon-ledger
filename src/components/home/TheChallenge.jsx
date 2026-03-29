@@ -1,13 +1,19 @@
 import React from 'react';
 import SectionReveal from '@/components/shared/SectionReveal';
 import SectionLabel from '@/components/shared/SectionLabel';
-import HorizonLine from '@/components/shared/HorizonLine';
+import { IMAGES } from '@/lib/images';
 
 export default function TheChallenge() {
   return (
-    <section className="py-24 lg:py-32">
-      <HorizonLine />
-      <div className="px-[5vw] lg:px-[8vw] mt-24 lg:mt-32">
+    <section className="relative py-32 lg:py-48 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={IMAGES.grass} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to right, rgba(18,20,18,0.92) 0%, rgba(18,20,18,0.75) 60%, rgba(18,20,18,0.5) 100%)'
+        }} />
+      </div>
+      <div className="relative z-10 px-[5vw] lg:px-[8vw]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start">
           <SectionReveal>
             <SectionLabel>The Challenge</SectionLabel>
