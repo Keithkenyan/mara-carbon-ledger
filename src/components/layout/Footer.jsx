@@ -47,7 +47,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* Contact */}
+        {/* Contact + Resources */}
         <div className="md:col-span-4">
           <h4 className="font-tech text-[9px] tracking-[0.3em] text-ochre uppercase mb-6">Contact</h4>
           <div className="flex flex-col gap-3 font-body text-sm text-white/40">
@@ -55,9 +55,21 @@ export default function Footer() {
             <a href="tel:0715047047" className="hover:text-ochre transition-colors">0715 047047 | 0777 047047</a>
             <span>Narok County, Kenya</span>
           </div>
+
           <div className="mt-8 pt-8 border-t border-white/5">
-            <span className="font-tech text-[9px] tracking-[0.2em] text-white/20 uppercase block">Project Coordinates</span>
-            <span className="font-tech text-[10px] tracking-[0.15em] text-white/35 mt-1 block">−1°30′S &nbsp;35°00′E</span>
+            <h4 className="font-tech text-[9px] tracking-[0.3em] text-ochre uppercase mb-4">Resources</h4>
+            <div className="flex flex-col gap-2 font-body text-sm text-white/35">
+              {[
+                'Project Design Document (PD)',
+                'ESIA',
+                'ESMP',
+                'Labour Policy',
+                'Independent ESIA',
+                'Independent Carbon Verification',
+              ].map(doc => (
+                <span key={doc} className="hover:text-ochre transition-colors cursor-default">{doc}</span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

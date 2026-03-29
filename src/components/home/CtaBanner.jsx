@@ -18,12 +18,15 @@ export default function CtaBanner() {
             Get in Touch
           </p>
           <h2 className="font-display text-4xl md:text-6xl text-ether tracking-tight mb-8 leading-tight">
-            Building Resilient Mara<br />Ecosystems Together.
+            Get in Touch
           </h2>
+          <p className="font-body text-base text-white/55 leading-relaxed mb-4 max-w-xl">
+            <strong className="text-ether/70">Email:</strong>{' '}
+            <a href="mailto:info@onemaracarbon.org" className="hover:text-ochre transition-colors">info@onemaracarbon.org</a>
+          </p>
           <p className="font-body text-base text-white/55 leading-relaxed mb-10 max-w-xl">
-            OMCP is designed to deliver long-term value within the Mara landscape through 
-            direct payments to landowners, supporting conservancy operations, investment in 
-            sustainable land management, and restoration of degraded land.
+            <strong className="text-ether/70">Phone:</strong>{' '}
+            <a href="tel:0715047047" className="hover:text-ochre transition-colors">0715 047047 | 0777 047047</a>
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
