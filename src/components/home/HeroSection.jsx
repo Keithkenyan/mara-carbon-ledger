@@ -36,9 +36,9 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           className="font-display text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] leading-[0.92] tracking-[-0.02em] text-ether mt-8 max-w-5xl"
         >
-          The Mara's<br />
-          <span className="text-ochre">Carbon</span><br />
-          Endures.
+          Building a resilient<br />
+          <span className="text-ochre">Mara ecosystem</span><br />
+          for sustainable livelihoods.
         </motion.h1>
 
         <motion.p
@@ -47,9 +47,9 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.9 }}
           className="font-body text-base md:text-lg text-white/55 max-w-lg mt-8 leading-relaxed"
         >
-          A verified, community-governed carbon sequestration project protecting 
-          over 100,000 hectares of Kenya's Greater Mara Ecosystem — one of Earth's 
-          last intact tropical savannahs.
+          We are a locally-led carbon project working with Maasai Mara conservancies 
+          and landowners to improve grasslands, support livelihoods, and generate 
+          long-term value to the community.
         </motion.p>
 
         {/* CTAs */}
@@ -60,16 +60,16 @@ export default function HeroSection() {
           className="mt-10 flex flex-wrap gap-4"
         >
           <Link
-            to="/credits"
+            to="/about"
             className="font-tech text-[10px] tracking-[0.2em] uppercase px-8 py-4 bg-ochre text-basalt hover:bg-ochre/90 transition-colors duration-300"
           >
-            Offset Your Carbon
+            Learn More
           </Link>
           <Link
-            to="/ledger"
+            to="/grievance"
             className="font-tech text-[10px] tracking-[0.2em] uppercase px-8 py-4 border border-ether/20 text-ether/70 hover:border-ochre hover:text-ochre transition-all duration-300"
           >
-            View the Ledger
+            Grievance &amp; Feedback
           </Link>
         </motion.div>
 

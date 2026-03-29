@@ -14,10 +14,10 @@ const team = [
 ];
 
 const partners = [
-  'Verra (Verified Carbon Standard)',
-  'Wildlife Works Carbon',
-  'Frankfurt Zoological Society',
-  'African Wildlife Foundation',
+  'MMWCA – Maasai Mara Wildlife Conservancies Association',
+  'Conservation International',
+  'Ahueni',
+  'Verra (VCS Registry)',
   'Kenya Wildlife Service',
   'Narok County Government',
 ];
@@ -47,27 +47,30 @@ export default function About() {
       <section className="px-[5vw] lg:px-[8vw] py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
           <SectionReveal>
-            <SectionLabel>Our Origin</SectionLabel>
+            <SectionLabel>About the Project</SectionLabel>
             <h2 className="font-display text-3xl md:text-4xl text-ether tracking-tight mb-8 leading-tight">
-              Born from a Crisis,<br />Built for Permanence
+              One Mara Carbon Project
             </h2>
             <div className="space-y-5 font-body text-base text-white/45 leading-relaxed">
               <p>
-                One Mara Carbon Project was founded in 2019 in direct response to the collapse 
-                of tourism revenue that had long subsidised conservation in the Greater Mara 
-                Ecosystem. As conservancies faced insolvency, a new financial model was needed — 
-                one that did not depend on visitors arriving from distant continents.
+                The One Mara Carbon Project (OMCP) is a carbon project managed by OMCP Mara Carbon CLG 
+                (a company limited by guarantee). The project works with conservancies across the Maasai 
+                Mara to improve how grasslands are managed — supporting sustainable grazing practices, 
+                restoration of degraded land, and strengthening wildlife habitats, while generating 
+                carbon credits from increased soil carbon.
               </p>
               <p>
-                The answer was carbon. The Mara's vast grasslands, riverine forests, and acacia 
-                woodlands had been quietly sequestering enormous quantities of CO₂ for millennia. 
-                One Mara was established to measure, verify, and monetise that sequestration — 
-                with the Maasai communities who own the land as primary beneficiaries.
+                The Mara landscape is under increasing pressure. Over time, heavy grazing has reduced 
+                the movement of livestock, with broken wildlife corridors damaging parts of the landscape. 
+                This has reduced soil health and the amount of carbon stored in the soil, threatening 
+                both wildlife habitats and the Maasai pastoralist way of life, which depends on healthy 
+                grasslands for livestock.
               </p>
               <p>
-                What began as an emergency revenue bridge has evolved into one of Africa's 
-                most rigorous and transparent carbon programmes, now protecting 112,000 hectares 
-                across 15 conservancies and generating over KES 580M in community revenue.
+                OMCP's theory of change delivers three activity packages: rotational grazing and 
+                livestock herd management, land restoration, and strengthening existing conservancies 
+                and establishing new ones — in partnership with MMWCA, Conservation International, 
+                and Ahueni.
               </p>
             </div>
           </SectionReveal>
@@ -75,9 +78,9 @@ export default function About() {
           <SectionReveal delay={0.2}>
             <div className="space-y-8">
               {[
-                { title: 'Additionality',  desc: 'Without carbon finance, conservancy land faces conversion pressure from agriculture and settlement. Our credits are genuinely additional — the protection would not occur without the revenue.' },
-                { title: 'Permanence',     desc: 'Long-term legally binding land-use agreements with Maasai group ranches, registered with Narok County Government, ensure that sequestration is permanent and enforceable.' },
-                { title: 'No Leakage',     desc: 'Annual satellite monitoring tracks displacement of any pressure to adjacent non-project areas. Three consecutive audits have returned zero leakage findings.' },
+                { title: 'What This Means for Landowners', desc: 'Participation in OMCP does not change land ownership. Land remains under full ownership of landowners, livestock keeping continues, and no automatic reduction in cattle is required. Grazing is improved to match land capacity.' },
+                { title: 'Benefits to Communities',       desc: 'OMCP delivers long-term value through direct payments to conservancy landowners from carbon revenues, supporting conservancy operations, investment in sustainable land management, and restoration of degraded land to support tourism.' },
+                { title: 'Independent Safeguards',        desc: 'An independent Environmental and Social Impact Assessment has been completed, with mitigation measures in place. OMCP is supported by clear safeguards, accountability systems, and a formal grievance process.' },
               ].map((item, i) => (
                 <div key={item.title} className="glass-card p-6">
                   <h4 className="font-tech text-xs tracking-[0.2em] text-ochre uppercase mb-3">{item.title}</h4>

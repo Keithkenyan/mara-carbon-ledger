@@ -4,11 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Menu } from 'lucide-react';
 
 const links = [
-  { label: 'Home',           path: '/' },
-  { label: 'The Mara Ledger', path: '/ledger' },
-  { label: 'Credit Portal',  path: '/credits' },
-  { label: 'Community',      path: '/community' },
-  { label: 'About',          path: '/about' },
+  { label: 'Home',                path: '/' },
+  { label: 'About',               path: '/about' },
+  { label: 'Community',           path: '/community' },
+  { label: 'Grievance & Feedback', path: '/grievance' },
+  { label: 'FAQ',                 path: '/faq' },
+  { label: 'Careers',             path: '/careers' },
 ];
 
 export default function Navigation() {

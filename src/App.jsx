@@ -15,6 +15,9 @@ import Ledger from '@/pages/Ledger';
 import Credits from '@/pages/Credits';
 import Community from '@/pages/Community';
 import About from '@/pages/About';
+import Grievance from '@/pages/Grievance';
+import FAQ from '@/pages/FAQ';
+import Careers from '@/pages/Careers';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -40,6 +43,9 @@ const AuthenticatedApp = () => {
         <Route path="/credits"   element={<Credits />} />
         <Route path="/community" element={<Community />} />
         <Route path="/about"     element={<About />} />
+        <Route path="/grievance" element={<Grievance />} />
+        <Route path="/faq"       element={<FAQ />} />
+        <Route path="/careers"   element={<Careers />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

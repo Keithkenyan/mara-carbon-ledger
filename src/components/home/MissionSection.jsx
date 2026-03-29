@@ -15,21 +15,19 @@ export default function MissionSection() {
         {/* Row 1 — text + image */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <SectionReveal>
-            <SectionLabel>The Mission</SectionLabel>
+            <SectionLabel>About OMCP</SectionLabel>
             <h2 className="font-display text-3xl md:text-5xl text-ether tracking-tight mb-8 leading-tight">
-              A Living Carbon Sink<br />of Global Significance
+              What is One Mara<br />Carbon Project?
             </h2>
             <p className="font-body text-base text-white/50 leading-relaxed mb-5">
-              The Greater Mara Ecosystem is one of Africa's last great wilderness areas — 
-              a vast mosaic of open grasslands, riverine forests, and ancient acacia woodland 
-              that sequesters millions of tonnes of CO₂ annually while sustaining one of the 
-              planet's most biodiverse landscapes.
+              The One Mara Carbon Project (OMCP) is a carbon project managed by OMCP Mara Carbon CLG 
+              (a company limited by guarantee). The project is working with conservancies across the 
+              Maasai Mara to improve how grasslands are managed by supporting sustainable grazing 
+              practices, restoration of degraded land, and strengthening wildlife habitats, while 
+              generating carbon credits from increased soil carbon.
             </p>
             <p className="font-body text-base text-white/50 leading-relaxed mb-10">
-              One Mara Carbon Project works in direct partnership with Maasai landowners and 
-              conservancies to protect this critical biome through rigorously verified carbon 
-              credits and transparent climate finance that flows directly to the ecosystem's 
-              rightful guardians.
+              Our key partners are MMWCA, Conservation International, and Ahueni.
             </p>
             <Link
               to="/about"
@@ -67,13 +65,13 @@ export default function MissionSection() {
           <SectionReveal delay={0.2} className="order-1 lg:order-2">
             <SectionLabel>The Approach</SectionLabel>
             <h2 className="font-display text-3xl md:text-5xl text-ether tracking-tight mb-10 leading-tight">
-              Science Meets<br />Stewardship
+              Three Activity<br />Packages
             </h2>
             <div className="flex flex-col gap-8">
               {[
-                { n: '01', title: 'Remote Sensing',       desc: 'Satellite-monitored biomass and carbon-stock measurement across the entire project area, audited annually.' },
-                { n: '02', title: 'Community Governance', desc: 'Revenue sharing with 15 Maasai group ranches and conservancies, with community-led decision-making on land use.' },
-                { n: '03', title: 'Third-Party Verification', desc: 'Independently audited under VCS (Verra) and CCBA protocols with annual public disclosure of all methodology.' },
+                { n: '01', title: 'Rotational Grazing & Herd Management', desc: 'We support conservancies to plan, manage, and monitor rotational grazing, building local capacity to restore grasslands, track livestock movement, and address land degradation.' },
+                { n: '02', title: 'Land Restoration', desc: 'We support recovery of severely degraded areas where grazing alone cannot restore the land, using reseeding, erosion control, invasive species management, and other rehabilitation measures.' },
+                { n: '03', title: 'Strengthening Conservancies', desc: 'In partnership with MMWCA, we strengthen conservancy governance by building leadership capacity, supporting formalization, improving management planning, and enabling more transparent and inclusive decision-making.' },
               ].map(item => (
                 <div key={item.n} className="grid grid-cols-[32px_1fr] gap-6 items-start">
                   <span className="font-tech text-[9px] tracking-[0.2em] text-ochre/50 mt-1">{item.n}</span>

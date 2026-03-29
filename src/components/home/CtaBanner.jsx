@@ -15,29 +15,29 @@ export default function CtaBanner() {
       <div className="relative z-10 max-w-3xl">
         <SectionReveal>
           <p className="font-tech text-[9px] tracking-[0.35em] text-ochre uppercase mb-6">
-            Take Action Today
+            Get in Touch
           </p>
           <h2 className="font-display text-4xl md:text-6xl text-ether tracking-tight mb-8 leading-tight">
-            Your Carbon Footprint.<br />Our Carbon Commitment.
+            Building Resilient Mara<br />Ecosystems Together.
           </h2>
           <p className="font-body text-base text-white/55 leading-relaxed mb-10 max-w-xl">
-            Every tonne you offset directly funds ranger salaries, community land leases, 
-            and the monitoring infrastructure that keeps the Mara intact. This is not a 
-            transaction — it is a long-term relationship with a living landscape.
+            OMCP is designed to deliver long-term value within the Mara landscape through 
+            direct payments to landowners, supporting conservancy operations, investment in 
+            sustainable land management, and restoration of degraded land.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              to="/credits"
+              to="/grievance"
               className="font-tech text-[10px] tracking-[0.2em] uppercase px-8 py-4 bg-ochre text-basalt hover:bg-ochre/90 transition-colors"
             >
-              Purchase Credits
+              Grievance &amp; Feedback
             </Link>
-            <Link
-              to="/ledger"
+            <a
+              href="mailto:info@onemaracarbon.org"
               className="font-tech text-[10px] tracking-[0.2em] uppercase px-8 py-4 border border-ether/20 text-ether/70 hover:border-ochre hover:text-ochre transition-all"
             >
-              Read the Methodology
-            </Link>
+              Contact Us
+            </a>
           </div>
         </SectionReveal>
       </div>
