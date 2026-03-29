@@ -16,13 +16,13 @@
     --card-foreground: 160 20% 92%;
     --popover: 120 5% 11%;
     --popover-foreground: 160 20% 92%;
-    --primary: 27 48% 64%;
+    --primary: 51 42% 50%;
     --primary-foreground: 120 5% 8%;
-    --secondary: 148 30% 14%;
+    --secondary: 70 36% 21%;
     --secondary-foreground: 160 20% 92%;
     --muted: 120 5% 14%;
     --muted-foreground: 160 8% 50%;
-    --accent: 148 30% 14%;
+    --accent: 70 36% 21%;
     --accent-foreground: 160 20% 92%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
@@ -55,12 +55,12 @@
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #121412; }
 ::-webkit-scrollbar-thumb { background: #2a3a2e; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #d4a276; }
+::-webkit-scrollbar-thumb:hover { background: #B5A14A; }
 
 /* Horizon line divider */
 .horizon-line {
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(212,162,118,0.25) 30%, rgba(212,162,118,0.4) 50%, rgba(212,162,118,0.25) 70%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(181,161,74,0.25) 30%, rgba(181,161,74,0.4) 50%, rgba(181,161,74,0.25) 70%, transparent 100%);
   width: 100%;
 }
 
@@ -95,8 +95,8 @@
 
 /* Data ticker */
 @keyframes pulse-glow {
-  0%, 100% { text-shadow: 0 0 20px rgba(212,162,118,0.3); }
-  50%       { text-shadow: 0 0 40px rgba(212,162,118,0.6), 0 0 80px rgba(212,162,118,0.2); }
+  0%, 100% { text-shadow: 0 0 20px rgba(181,161,74,0.3); }
+  50%       { text-shadow: 0 0 40px rgba(181,161,74,0.6), 0 0 80px rgba(181,161,74,0.2); }
 }
 .data-glow {
   animation: pulse-glow 3s ease-in-out infinite;

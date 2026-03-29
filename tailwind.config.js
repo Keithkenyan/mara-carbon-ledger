@@ -11,9 +11,10 @@ module.exports = {
       },
       colors: {
         basalt:      '#121412',
-        ochre:       '#D4A276',
+        ochre:       '#B5A14A',
+        crimson:     '#B22234',
         ether:       '#E8F0EE',
-        chlorophyll: '#1B3022',
+        chlorophyll: '#4A5022',
         background:  'hsl(var(--background))',
         foreground:  'hsl(var(--foreground))',
         card:        { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
@@ -44,7 +45,7 @@ module.exports = {
   },
   safelist: [
     'font-display', 'font-tech', 'font-body',
-    'text-ochre', 'text-ether', 'bg-chlorophyll', 'bg-basalt', 'text-basalt',
+    'text-ochre', 'text-crimson', 'text-ether', 'bg-chlorophyll', 'bg-basalt', 'text-basalt',
     'data-glow', 'glass-card', 'horizon-line', 'fade-lift', 'carbon-particle',
   ],
   plugins: [require("tailwindcss-animate")],

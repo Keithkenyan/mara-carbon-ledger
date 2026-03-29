@@ -35,9 +35,14 @@ export default function Navigation() {
       >
         {/* Logo */}
         <Link to="/" className="relative z-50 flex items-center gap-3" aria-label="One Mara Carbon – Home">
+          <img
+            src="https://media.base44.com/images/public/69c8e60e62a8be7933ac088c/c0842a476_ONE-MARA-CARBON-LOGO.png"
+            alt="One Mara Carbon"
+            className="h-10 w-auto"
+          />
           <div className="flex flex-col leading-none">
-            <span className="font-display text-ether text-lg tracking-[0.12em] uppercase">One Mara</span>
-            <span className="font-tech text-ochre text-[9px] tracking-[0.35em] uppercase mt-0.5">Carbon Project</span>
+            <span className="font-display text-ether text-lg tracking-[0.1em] uppercase">One Mara Carbon</span>
+            <span className="font-tech text-[9px] tracking-[0.35em] uppercase mt-0.5" style={{ color: '#B5A14A' }}>Project</span>
           </div>
         </Link>
 
