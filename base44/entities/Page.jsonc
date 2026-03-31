@@ -1,0 +1,30 @@
+{
+  "name": "Page",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Page title shown in the browser and as the page heading"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL path, e.g. 'our-work' becomes /our-work"
+    },
+    "blocks": {
+      "type": "array",
+      "description": "Array of content blocks \u2014 each block has a type (text | image | text_image) and content fields",
+      "items": {
+        "type": "object"
+      }
+    },
+    "published": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the page is visible to visitors"
+    }
+  },
+  "required": [
+    "title",
+    "slug"
+  ]
+}

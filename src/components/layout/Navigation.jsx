@@ -9,6 +9,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const navContent = useSiteContent('nav');
+  const images = useSiteContent('images');
   const links = navContent.links;
 
   useEffect(() => {
@@ -30,7 +31,7 @@ export default function Navigation() {
         {/* Logo */}
         <Link to="/" className="relative z-50 flex items-center gap-3" aria-label="One Mara Carbon – Home">
           <img
-            src="https://media.base44.com/images/public/69c8e60e62a8be7933ac088c/c0842a476_ONE-MARA-CARBON-LOGO.png"
+            src={images.logo}
             alt="One Mara Carbon"
             className="h-10 w-auto"
           />

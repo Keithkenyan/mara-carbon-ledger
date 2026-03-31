@@ -4,6 +4,7 @@ import { base44 } from '@/api/base44Client';
 import { Save, Upload } from 'lucide-react';
 
 const IMAGE_KEYS = [
+  { key: 'logo',       label: 'Logo (Navigation)' },
   { key: 'hero',       label: 'Hero Background' },
   { key: 'woodland',   label: 'Woodland' },
   { key: 'ranger',     label: 'Ranger' },

@@ -19,6 +19,7 @@ import Grievance from '@/pages/Grievance';
 import FAQ from '@/pages/FAQ';
 import Careers from '@/pages/Careers';
 import Admin from '@/pages/Admin';
+import DynamicPage from '@/pages/DynamicPage';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -47,7 +48,8 @@ const AuthenticatedApp = () => {
         <Route path="/grievance" element={<Grievance />} />
         <Route path="/faq"       element={<FAQ />} />
         <Route path="/careers"   element={<Careers />} />
-      </Route>
+        <Route path="/:slug"     element={<DynamicPage />} />
+        </Route>
       <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>

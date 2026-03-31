@@ -43,6 +43,7 @@ export const DEFAULTS = {
     cta2Path: '/grievance',
   },
   images: {
+    logo: 'https://media.base44.com/images/public/69c8e60e62a8be7933ac088c/c0842a476_ONE-MARA-CARBON-LOGO.png',
     hero: 'https://media.base44.com/images/public/69c8e60e62a8be7933ac088c/b40c6d4c3_generated_image.png',
     woodland: 'https://media.base44.com/images/public/69c8e60e62a8be7933ac088c/41376192a_generated_image.png',
     ranger: 'https://media.base44.com/images/public/69c8e60e62a8be7933ac088c/127763587_generated_image.png',

@@ -4,8 +4,9 @@ import AdminNav from '@/components/admin/AdminNav';
 import AdminImages from '@/components/admin/AdminImages';
 import AdminFooter from '@/components/admin/AdminFooter';
 import AdminHero from '@/components/admin/AdminHero';
+import AdminPages from '@/components/admin/AdminPages';
 
-const TABS = ['Navigation', 'Hero', 'Images', 'Footer'];
+const TABS = ['Navigation', 'Hero', 'Images', 'Footer', 'Pages'];
 
 export default function Admin() {
   const [user, setUser] = useState(null);
@@ -68,6 +69,7 @@ export default function Admin() {
         {tab === 'Hero'       && <AdminHero />}
         {tab === 'Images'     && <AdminImages />}
         {tab === 'Footer'     && <AdminFooter />}
+        {tab === 'Pages'      && <AdminPages />}
       </div>
     </div>
   );
