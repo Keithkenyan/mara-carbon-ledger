@@ -25,12 +25,14 @@ export default function Admin() {
     </div>
   );
 
-  if (!user || user.role !== 'admin') return (
-    <div className="fixed inset-0 bg-basalt flex flex-col items-center justify-center gap-4">
-      <p className="font-tech text-[11px] tracking-[0.25em] uppercase text-white/40">Access Denied</p>
-      <p className="font-body text-sm text-white/25">Admin access required.</p>
-    </div>
-  );
+  if (!user) {
+    base44.auth.redirectToLogin('/admin');
+    return (
+      <div className="fixed inset-0 bg-basalt flex items-center justify-center">
+        <div className="w-6 h-6 border-2 border-white/10 border-t-ochre rounded-full animate-spin" />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-basalt text-ether">
