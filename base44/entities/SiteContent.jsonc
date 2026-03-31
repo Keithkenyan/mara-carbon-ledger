@@ -1,0 +1,17 @@
+{
+  "name": "SiteContent",
+  "type": "object",
+  "properties": {
+    "section": {
+      "type": "string",
+      "description": "Section identifier, e.g. 'nav', 'footer', 'hero', 'images'"
+    },
+    "data": {
+      "type": "object",
+      "description": "JSON blob containing the editable fields for this section"
+    }
+  },
+  "required": [
+    "section"
+  ]
+}

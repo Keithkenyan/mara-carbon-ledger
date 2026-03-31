@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 import CarbonCounter from '@/components/home/CarbonCounter';
 import GeoTag from '@/components/shared/GeoTag';
 import { ArrowDown } from 'lucide-react';
-import { IMAGES } from '@/lib/images';
+import { useSiteContent } from '@/hooks/useSiteContent';
 
 export default function HeroSection() {
+  const hero = useSiteContent('hero');
+  const images = useSiteContent('images');
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Cinematic background */}
       <div className="absolute inset-0">
         <img
-          src={IMAGES.hero}
+          src={images.hero}
           alt="Aerial — Masai Mara savannah, Kenya"
           className="w-full h-full object-cover object-center"
         />
@@ -36,9 +38,9 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           className="font-display text-[48px] sm:text-[64px] md:text-[80px] lg:text-[96px] xl:text-[112px] leading-[0.92] tracking-[-0.02em] text-ether mt-8 max-w-5xl"
         >
-          Building a resilient<br />
-          <span className="text-ochre">Mara ecosystem</span><br />
-          for sustainable livelihoods.
+          {hero.headline1}<br />
+          <span className="text-ochre">{hero.headline2}</span><br />
+          {hero.headline3}
         </motion.h1>
 
         <motion.p
@@ -47,9 +49,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.9 }}
           className="font-body text-base md:text-lg text-white/55 max-w-lg mt-8 leading-relaxed"
         >
-          We are a locally-led carbon project working with Maasai Mara conservancies 
-          and landowners to improve grasslands, support livelihoods, and generate 
-          long-term value to the community.
+          {hero.subtext}
         </motion.p>
 
         {/* CTAs */}
@@ -60,16 +60,16 @@ export default function HeroSection() {
           className="mt-10 flex flex-wrap gap-4"
         >
           <Link
-            to="/about"
+            to={hero.cta1Path}
             className="font-tech text-[10px] tracking-[0.2em] uppercase px-8 py-4 bg-ochre text-basalt hover:bg-ochre/90 transition-colors duration-300"
           >
-            Learn More
+            {hero.cta1Label}
           </Link>
           <Link
-            to="/grievance"
+            to={hero.cta2Path}
             className="font-tech text-[10px] tracking-[0.2em] uppercase px-8 py-4 border border-ether/20 text-ether/70 hover:border-ochre hover:text-ochre transition-all duration-300"
           >
-            Grievance &amp; Feedback
+            {hero.cta2Label}
           </Link>
         </motion.div>
 

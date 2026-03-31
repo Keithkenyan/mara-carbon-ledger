@@ -18,6 +18,7 @@ import About from '@/pages/About';
 import Grievance from '@/pages/Grievance';
 import FAQ from '@/pages/FAQ';
 import Careers from '@/pages/Careers';
+import Admin from '@/pages/Admin';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -47,6 +48,7 @@ const AuthenticatedApp = () => {
         <Route path="/faq"       element={<FAQ />} />
         <Route path="/careers"   element={<Careers />} />
       </Route>
+      <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

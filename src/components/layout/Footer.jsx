@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSiteContent } from '@/hooks/useSiteContent';
 
 export default function Footer() {
+  const f = useSiteContent('footer');
   return (
     <footer className="relative px-[5vw] lg:px-[8vw] py-16 lg:py-24 bg-basalt">
       <div className="horizon-line mb-16" />
@@ -12,11 +14,10 @@ export default function Footer() {
           <span className="font-display text-ether text-2xl tracking-[0.12em] uppercase block mb-1">One Mara</span>
           <span className="font-tech text-ochre text-[9px] tracking-[0.35em] uppercase block mb-6">Carbon Project</span>
           <p className="font-body text-sm text-white/40 max-w-sm leading-relaxed">
-            Protecting the Greater Mara Ecosystem through verified carbon sequestration, 
-            community land stewardship, and transparent climate finance.
+            {f.tagline}
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            {['MMWCA', 'Conservation International', 'Ahueni'].map(badge => (
+            {f.badges.map(badge => (
               <span key={badge} className="font-tech text-[8px] tracking-[0.2em] uppercase border border-white/10 text-white/30 px-3 py-1.5">
                 {badge}
               </span>
@@ -32,14 +33,7 @@ export default function Footer() {
         <div className="md:col-span-3">
           <h4 className="font-tech text-[9px] tracking-[0.3em] text-ochre uppercase mb-6">Navigate</h4>
           <nav className="flex flex-col gap-3">
-            {[
-              { label: 'Home', path: '/' },
-              { label: 'About OMCP', path: '/about' },
-              { label: 'Community', path: '/community' },
-              { label: 'Grievance & Feedback', path: '/grievance' },
-              { label: 'FAQ', path: '/faq' },
-              { label: 'Careers', path: '/careers' },
-            ].map(l => (
+            {f.links.map(l => (
               <Link key={l.path} to={l.path} className="font-body text-sm text-white/40 hover:text-ochre transition-colors">
                 {l.label}
               </Link>
@@ -51,9 +45,9 @@ export default function Footer() {
         <div className="md:col-span-4">
           <h4 className="font-tech text-[9px] tracking-[0.3em] text-ochre uppercase mb-6">Contact</h4>
           <div className="flex flex-col gap-3 font-body text-sm text-white/40">
-            <a href="mailto:info@onemaracarbon.org" className="hover:text-ochre transition-colors">info@onemaracarbon.org</a>
-            <a href="tel:0715047047" className="hover:text-ochre transition-colors">0715 047047 | 0777 047047</a>
-            <span>Narok County, Kenya</span>
+            <a href={`mailto:${f.email}`} className="hover:text-ochre transition-colors">{f.email}</a>
+            <a href={`tel:${f.phone.replace(/\s/g,'')}`} className="hover:text-ochre transition-colors">{f.phone}</a>
+            <span>{f.location}</span>
           </div>
 
           <div className="mt-8 pt-8 border-t border-white/5">
@@ -77,12 +71,8 @@ export default function Footer() {
       <div className="horizon-line mt-16 mb-8" />
 
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <p className="font-tech text-[9px] tracking-[0.15em] text-white/20 uppercase">
-          © 2026 One Mara Carbon Project · All Rights Reserved
-        </p>
-        <p className="font-tech text-[9px] tracking-[0.15em] text-white/20 uppercase">
-          Building resilient Mara ecosystems for sustainable livelihoods
-        </p>
+        <p className="font-tech text-[9px] tracking-[0.15em] text-white/20 uppercase">{f.copyright}</p>
+        <p className="font-tech text-[9px] tracking-[0.15em] text-white/20 uppercase">{f.bottomTagline}</p>
       </div>
     </footer>
   );

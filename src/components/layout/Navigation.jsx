@@ -2,20 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Menu } from 'lucide-react';
-
-const links = [
-  { label: 'Home',                path: '/' },
-  { label: 'About',               path: '/about' },
-  { label: 'Community',           path: '/community' },
-  { label: 'Grievance & Feedback', path: '/grievance' },
-  { label: 'FAQ',                 path: '/faq' },
-  { label: 'Careers',             path: '/careers' },
-];
+import { useSiteContent } from '@/hooks/useSiteContent';
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navContent = useSiteContent('nav');
+  const links = navContent.links;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -99,10 +93,10 @@ export default function Navigation() {
             {/* CTA bottom right */}
             <div className="absolute bottom-10 right-[8vw]">
               <Link
-                to="/credits"
+                to={navContent.ctaPath}
                 className="font-tech text-[10px] tracking-[0.2em] uppercase px-6 py-3 border border-ochre/50 text-ochre hover:bg-ochre hover:text-basalt transition-all duration-300"
               >
-                Offset Now
+                {navContent.ctaLabel}
               </Link>
             </div>
           </motion.div>
