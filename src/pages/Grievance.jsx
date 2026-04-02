@@ -73,6 +73,27 @@ export default function Grievance() {
 
       <HorizonLine />
 
+      {/* Process Graphic */}
+      <section className="px-[5vw] lg:px-[8vw] py-24 lg:py-32">
+        <SectionReveal>
+          <SectionLabel>Process Overview</SectionLabel>
+          <h2 className="font-display text-3xl md:text-5xl text-ether tracking-tight mb-12 leading-tight">
+            Grievance &amp; Feedback Process
+          </h2>
+        </SectionReveal>
+        <SectionReveal delay={0.1}>
+          <div className="flex justify-center">
+            <img
+              src="https://media.base44.com/images/public/69c8e60e62a8be7933ac088c/fe181b5fd_OMCP-GFM-Banner---Print-copy.png"
+              alt="OMCP Grievance & Feedback Process"
+              className="w-full max-w-2xl rounded-sm"
+            />
+          </div>
+        </SectionReveal>
+      </section>
+
+      <HorizonLine />
+
       {/* How to submit */}
       <section className="px-[5vw] lg:px-[8vw] py-24 lg:py-32">
         <SectionReveal>
