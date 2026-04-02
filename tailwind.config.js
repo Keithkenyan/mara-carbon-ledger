@@ -7,7 +7,7 @@ module.exports = {
       fontFamily: {
         display: ['Tenor Sans', 'Georgia', 'serif'],
         tech:    ['Space Grotesk', 'monospace'],
-        body:    ['Josefin Sans', 'sans-serif'],
+        body:    ['Poppins', 'sans-serif'],
       },
       colors: {
         basalt:      '#121412',
